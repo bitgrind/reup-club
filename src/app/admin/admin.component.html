@@ -1,0 +1,24 @@
+<h1>Add New Member!</h1>
+<div>
+  <div>
+    <label>Name:</label>
+    <input #newName>
+  </div>
+  <div>
+    <label>Email:</label>
+    <input #newEmail>
+  </div>
+  <div>
+    <label>Phone:</label>
+    <input #newPhone>
+  </div>
+  <div>
+    <label>Address:</label>
+    <input #newAddress>
+  </div>
+  <div>
+    <label>Bio:</label>
+    <textarea #newBio></textarea>
+  </div>
+  <button (click)="submitForm(newName.value, newEmail.value, newPhone.value, newAddress.value, newBio.value); newName.value=''; newEmail.value=''; newPhone.value=''; newAddress.value=''; newBio.value='';"></button>
+</div>

@@ -1,0 +1,23 @@
+{ "members": [{
+    "id":"1",
+    "name":"Keith Stedman",
+    "email":"keithstedman@gmail.com",
+    "phone":"503-504-5709",
+    "address":"1536 N Schofield St",
+    "bio":"Keith is from Alaska"
+  },{
+    "id":"2",
+    "name":"Alax Lee",
+    "email":"doomcatlee@gmail.com",
+    "phone":"503-998-3176",
+    "address":"14541 SE Mia Garden Drive, Happy Vally, OR",
+    "bio":"Alex is from Oregon"
+  },{
+    "id":"3",
+    "name":"Ryan Jones",
+    "email":"ryanjonesirl@gmail.com",
+    "phone":"503-706-1686",
+    "address":"8416 SE Insley, Portland, OR",
+    "bio":"Ryan is from Texas"
+  }]
+}
