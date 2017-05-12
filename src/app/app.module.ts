@@ -9,6 +9,7 @@ import { routing } from './app.routing';
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { MemberDetailComponent } from './member-detail/member-detail.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     WelcomeComponent,
     AboutComponent,
     NavbarComponent,
-    DashboardComponent
+    DashboardComponent,
+    MemberDetailComponent
   ],
   imports: [
     BrowserModule,
