@@ -6,4 +6,8 @@
     <h2>{{member.email}}</h2>
     <h2>{{member.phone}}</h2>
   </div>
+  <div *ngIf="currentRoute === '/admin'">
+    <hr>
+    <app-edit-member [selectedMember]="member"></app-edit-member>
+  </div>
 </div>
