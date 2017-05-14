@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Member } from '../member.model';
 import { MemberService } from '../member.service';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-member-detail',
@@ -10,9 +11,10 @@ import { MemberService } from '../member.service';
   styleUrls: ['./member-detail.component.css'],
   providers: [MemberService]
 })
+
 export class MemberDetailComponent implements OnInit {
-  memberId: number = null;
-  memberToDisplay: Member;
+  memberId: string;
+  memberToDisplay;
 
   constructor(
     private route: ActivatedRoute,
@@ -22,9 +24,9 @@ export class MemberDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.memberId = parseInt(urlParameters['id']);
+      this.memberId = urlParameters['id'];
     });
-    // this.memberToDisplay = this.memberService.getMemberById(this.memberId);
+    this.memberToDisplay = this.memberService.getMemberById(this.memberId);
   }
 
 }

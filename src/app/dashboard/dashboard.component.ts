@@ -20,8 +20,8 @@ export class DashboardComponent implements OnInit {
     this.members = this.memberService.getMembers();
   }
 
-  goToDetailPage(clickMember: Member) {
-    // this.router.navigate(['members', clickMember.id]);
+  goToDetailPage(clickMember) {
+    this.router.navigate(['members', clickMember.$key]);
   }
 
 }
