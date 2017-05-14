@@ -20,3 +20,7 @@
   <label>Bio</label>
   <input [(ngModel)]="selectedMember.name">
 </div>
+
+<button (click)="beginUpdatingMember(selectedMember)">Update</button>
+<hr>
+<button (click)="beginDeletingMember(selectedMember)">Delete</button>

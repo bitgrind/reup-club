@@ -22,4 +22,20 @@ export class MemberService {
     return this.database.object('members/' + memberId);
   }
 
+  updateMember(localUpdatedMember){
+    var memberEntryInFirebase = this.getMemberById(localUpdatedMember.$key);
+    memberEntryInFirebase.update({
+      name: localUpdatedMember.name,
+      email: localUpdatedMember.email,
+      phone: localUpdatedMember.phone,
+      address: localUpdatedMember.address,
+      bio: localUpdatedMember.bio
+    });
+  }
+
+  deleteMember(localMemberToDelete){
+    var memberEntryInFirebase = this.getMemberById(localMemberToDelete.$key);
+    memberEntryInFirebase.remove();
+  }
+
 }
