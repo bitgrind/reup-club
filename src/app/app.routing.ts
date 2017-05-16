@@ -1,10 +1,10 @@
-import { ModuleWithProviders }  from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { WelcomeComponent } from './welcome/welcome.component';
-import { AboutComponent }   from './about/about.component';
-import { DashboardComponent }   from './dashboard/dashboard.component';
-import { MemberDetailComponent } from './member-detail/member-detail.component';
-import { AdminComponent } from './admin/admin.component';
+import { ModuleWithProviders }    from '@angular/core';
+import { Routes, RouterModule }   from '@angular/router';
+import { WelcomeComponent }       from './welcome/welcome.component';
+import { AboutComponent }         from './about/about.component';
+import { DashboardComponent }     from './dashboard/dashboard.component';
+import { MemberDetailComponent }  from './member-detail/member-detail.component';
+import { AdminComponent }         from './admin/admin.component';
 
 const appRoutes: Routes = [
   {

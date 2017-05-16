@@ -42,4 +42,3 @@ testem.log
 Thumbs.db
 
 #Firebase cerdentials
-/src/app/api-keys.ts
