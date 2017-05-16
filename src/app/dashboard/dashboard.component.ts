@@ -27,6 +27,7 @@ export class DashboardComponent implements OnInit {
   }
 
   onChange(optionFromMenu){
+    console.log(optionFromMenu);
     this.filterByRole = optionFromMenu;
   }
 

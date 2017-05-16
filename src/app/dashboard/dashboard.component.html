@@ -3,8 +3,9 @@
 <div>
  <select (change)="onChange($event.target.value)">
    <option value='allmembers' selected="selected">All Members</option>
-   <option value='managers'>Managers</option>
-   <option value='employees'>Employees</option>
+   <option value='founder'>Founder</option>
+   <option value='manager'>Managers</option>
+   <option value='employee'>Employees</option>
  </select>
 </div>
 <div class="col-md-6 col-sm-6" *ngFor="let member of members | async | memberpipe:filterByRole ">
