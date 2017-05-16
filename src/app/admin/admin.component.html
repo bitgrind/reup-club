@@ -5,6 +5,10 @@
     <input #newName>
   </div>
   <div>
+    <label>Role:</label>
+    <input #newRole>
+  </div>
+  <div>
     <label>Email:</label>
     <input #newEmail>
   </div>
@@ -20,7 +24,7 @@
     <label>Bio:</label>
     <textarea #newBio></textarea>
   </div>
-  <button (click)="submitForm(newName.value, newEmail.value, newPhone.value, newAddress.value, newBio.value); newName.value=''; newEmail.value=''; newPhone.value=''; newAddress.value=''; newBio.value='';">Add Member</button>
+  <button (click)="submitForm(newName.value, newRole.value, newEmail.value, newPhone.value, newAddress.value, newBio.value); newName.value=''; newRole.value=''; newEmail.value=''; newPhone.value=''; newAddress.value=''; newBio.value='';">Add Member</button>
 </div>
 
 <div>

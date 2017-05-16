@@ -14,6 +14,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 export class DashboardComponent implements OnInit {
   members: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
+  filterByRole: string = "founder";
 
   constructor(private router: Router, private memberService: MemberService){}
 
@@ -23,6 +24,10 @@ export class DashboardComponent implements OnInit {
 
   goToDetailPage(clickMember) {
     this.router.navigate(['members', clickMember.$key]);
+  }
+
+  onChange(optionFromMenu){
+    this.filterByRole = optionFromMenu;
   }
 
 }
