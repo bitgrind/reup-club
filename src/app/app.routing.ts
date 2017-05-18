@@ -5,6 +5,7 @@ import { AboutComponent }         from './about/about.component';
 import { DashboardComponent }     from './dashboard/dashboard.component';
 import { MemberDetailComponent }  from './member-detail/member-detail.component';
 import { AdminComponent }         from './admin/admin.component';
+import { TaskComponent }         from './task/task.component';
 
 const appRoutes: Routes = [
   {
@@ -26,6 +27,10 @@ const appRoutes: Routes = [
   {
     path: 'admin',
     component: AdminComponent
+  },
+  {
+    path: 'task',
+    component: TaskComponent
   }
 ];
 

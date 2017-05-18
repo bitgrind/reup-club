@@ -1,21 +1,31 @@
-<h1>Dashboard</h1>
 
-<div>
- <select (change)="onChange($event.target.value)">
-   <option value='allmembers' selected="selected">All Members</option>
-   <option value='founder'>Founder</option>
-   <option value='manager'>Managers</option>
-   <option value='employee'>Employees</option>
- </select>
-</div>
-<div class="col-md-6 col-sm-6" *ngFor="let member of members | async | memberpipe:filterByRole ">
-  <div class="member" (click)="goToDetailPage(member)">
-    <h2>{{member.name}}</h2>
-    <h2>{{member.email}}</h2>
-    <h2>{{member.phone}}</h2>
+<div class="col-md-8 row">
+  <div class="member-filter">
+    <h2>List Members</h2>
+   <select (change)="onChange($event.target.value)">
+     <option value='allmembers' selected="selected">All Members</option>
+     <option value='founder'>Founder</option>
+     <option value='manager'>Managers</option>
+     <option value='employee'>Employees</option>
+   </select>
   </div>
-  <div *ngIf="currentRoute === '/admin'">
-    <hr>
-    <app-edit-member [selectedMember]="member"></app-edit-member>
+  <div class="col-md-6 col-sm-6" *ngFor="let member of members | async | memberpipe:filterByRole ">
+    <div class="member">
+      <h2 (click)="goToDetailPage(member)">{{member.name}} - <span>{{member.role}}</span></h2>
+      <a href="mailto:{{member.email}}"><span>{{member.email}}</span></a>
+      <h3><a href="tel:{{member.phone}}">{{member.phone}}</a></h3>
+    </div>
+    <div *ngIf="currentRoute === '/admin'">
+      <hr>
+      <app-edit-member [selectedMember]="member"></app-edit-member>
+    </div>
+  </div>
+</div>
+<div class="col-md-4 row">
+  <h2>Tasks for Members</h2>
+  <div class="task" *ngFor="let task of tasks | async">
+    <h3>{{task.name}}</h3>
+    <h3>{{task.role}}</h3>
+    <h3>{{task.status}}</h3>
   </div>
 </div>

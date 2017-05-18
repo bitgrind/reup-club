@@ -17,6 +17,9 @@ import { AdminComponent } from './admin/admin.component';
 import { EditMemberComponent } from './edit-member/edit-member.component';
 
 import { MemberpipePipe } from './memberpipe.pipe';
+import { TaskComponent } from './task/task.component';
+import { MemberService } from './member.service';
+import { TaskService } from './task.service';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -35,7 +38,8 @@ export const firebaseConfig = {
     MemberDetailComponent,
     AdminComponent,
     EditMemberComponent,
-    MemberpipePipe
+    MemberpipePipe,
+    TaskComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +49,7 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule
   ],
-  providers: [],
+  providers: [MemberService, TaskService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

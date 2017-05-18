@@ -1,32 +1,35 @@
-<h1>Add New Member!</h1>
-<div>
-  <div>
-    <label>Name:</label>
-    <input #newName>
+<div class="col-md-12 from-control">
+  <div class="col-md-6">
+    <h1>Add New Member!</h1>
+    <div>
+      <label>Name:</label>
+      <input #newName>
+    </div>
+    <div>
+      <label>Role:</label>
+      <input #newRole>
+    </div>
+    <div>
+      <label>Email:</label>
+      <input #newEmail>
+    </div>
+    <div>
+      <label>Phone:</label>
+      <input #newPhone>
+    </div>
+    <div>
+      <label>Address:</label>
+      <input #newAddress>
+    </div>
+    <div>
+      <label>Bio:</label>
+      <textarea #newBio></textarea>
+    </div>
+    <button (click)="submitForm(newName.value, newRole.value, newEmail.value, newPhone.value, newAddress.value, newBio.value); newName.value=''; newRole.value=''; newEmail.value=''; newPhone.value=''; newAddress.value=''; newBio.value='';">Add Member</button>
   </div>
-  <div>
-    <label>Role:</label>
-    <input #newRole>
-  </div>
-  <div>
-    <label>Email:</label>
-    <input #newEmail>
-  </div>
-  <div>
-    <label>Phone:</label>
-    <input #newPhone>
-  </div>
-  <div>
-    <label>Address:</label>
-    <input #newAddress>
-  </div>
-  <div>
-    <label>Bio:</label>
-    <textarea #newBio></textarea>
-  </div>
-  <button (click)="submitForm(newName.value, newRole.value, newEmail.value, newPhone.value, newAddress.value, newBio.value); newName.value=''; newRole.value=''; newEmail.value=''; newPhone.value=''; newAddress.value=''; newBio.value='';">Add Member</button>
+    <app-task></app-task>
 </div>
-
+<hr>
 <div>
   <app-dashboard></app-dashboard>
 </div>

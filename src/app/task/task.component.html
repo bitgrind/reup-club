@@ -1,0 +1,24 @@
+<h1>Add A Task!</h1>
+<div>
+  <div>
+    <label>Task:</label>
+    <input #newName>
+  </div>
+  <div>
+    <label>Role:</label>
+    <input #newRole>
+  </div>
+  <div>
+    <label>Completed?:</label>
+    <select #newStatus>
+      <option value="false" selected="selected">False</option>
+      <option value="true">True</option>
+    </select>
+  </div>
+  <button (click)="submitForm(newName.value, newRole.value, newStatus.value); newName.value=''; newRole.value='';">Add Task</button>
+</div>
+<div>
+  
+</div>
+
+<!-- string string boolean -->

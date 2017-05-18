@@ -1,2 +1,13 @@
 <h1>About reUP</h1>
-<p></p>
+<p>reUP is a platform based web application that provides dispenceries with a portal to interface with clients in purchasing marijuana and related products. This is the managment part of that system, as this get developed into a full functioning application it will be build in small more manageable sections. </p>
+<hr>
+<h1>Team reUP</h1>
+<div>
+  <div *ngFor="let member of members | async | memberpipe:manager">
+    <div class="member col-md-6">
+      <h2 (click)="goToDetailPage(member)">{{member.name}} - <span>{{member.role}}</span></h2>
+      <a href="mailto:{{member.email}}"><span>{{member.email}}</span></a>
+      <h3><a href="tel:{{member.phone}}">{{member.phone}}</a></h3>
+    </div>
+  </div>
+</div>
